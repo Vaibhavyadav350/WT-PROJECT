@@ -1,6 +1,6 @@
 # WT-PROJECT
 
-#Topic : Exception Handling
+Topic : Exception Handling
 This is a Web Technology project on Exception Handling, which consists of a website containing of several webpages having information about the following subtopics:
 1. Introduction to Exception Handling (by Sandeep)
 2. Try & Catch blocks (by Abhisikta)
