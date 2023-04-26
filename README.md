@@ -1,6 +1,11 @@
 # WT-PROJECT
 
-Topic : Exception Handling
+Topic : Exception Handling <br>
+Section : CSE39 <br>
+Group : 08 <br>
+
+## JAVA EXCEPTION HANDLING
+
 This is a Web Technology project on Exception Handling, which consists of a website containing of several webpages having information about the following subtopics:
 1. Introduction to Exception Handling (by Sandeep)
 2. Try & Catch blocks (by Abhisikta)
@@ -8,3 +13,6 @@ This is a Web Technology project on Exception Handling, which consists of a webs
 4. Finally block (by Ankit)
 5. User defined exception (by Vaibhav)
 6. Some frequently asked questions (by Sandeep)
+
+
+### Please Note: The project has been deployed on [GitHub Pages](https://vaibhavyadav350.github.io/WT-PROJECT/)
