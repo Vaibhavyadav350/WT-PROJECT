@@ -1,10 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html>
 
+<head>
+    <title>Try-Catch-Throws-Finally</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .card {
+            background-color: #262626;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        pre {
+            background-color: #333333;
+            border-radius: 5px;
+            color: lightgreen;
+            padding: 10px;
+            overflow-x: scroll;
+        }
+
+        .output {
+            background-color: #333333;
+            border-radius: 5px;
+            color: white;
+            padding: 10px;
+        }
+
+        .output p {
+            margin: 0;
+        }
+
+        #theory {
+            background-color: #262626;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.3);
+            margin: 20px auto;
+            max-width: 1500px;
+            padding: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: x-large;
+            color: violet;
+
+        }
+    </style>
+</head>
+
+<body>
+<h1>TryCatchThrows Exception</h1>
+<div id="theory">
+
+    In Java, try-catch-throw is a mechanism used for exception handling. In situations where a method can throw an
+    exception and you don't want to handle it within that method, you can use the "throws" keyword to indicate that
+    the method may throw an exception. The calling method can then use a try-catch block to handle the exception.
+
+    The try-catch-throws mechanism is particularly useful when you want to propagate an exception to a higher level
+    of the program for handling. It allows for more flexible and organized exception handling in larger programs.
+
+    Additionally, the throws keyword allows for a cleaner separation of concerns between different layers of the
+    program. For example, if a low-level method encounters an error, it can throw an exception to a higher-level
+    method that can handle the exception appropriately. This can help in debugging, maintenance, and testing of the
+    program.
+
+</div>
+<div class="card">
+    <h2>Example</h2>
+    <pre>
+            import java.io.*;
+
+            public class TryCatchThrowsExample {
+
+              // method that throws an IOException
+              static void readFile(String filename) throws IOException {
+                BufferedReader br = new BufferedReader(new FileReader(filename));
+                String line;
+                while ((line = br.readLine()) != null) {
+                  System.out.println(line);
+                }
+                br.close();
+              }
+
+              public static void main(String[] args) {
+
+                try {
+                  // calling the readFile method, which throws an IOException
+                  readFile("myfile.txt");
+                } catch (IOException e) {
+                  // handling the IOException
+                  System.out.println("An error occurred: " + e.getMessage());
+                }
+
+                System.out.println("Program completed successfully.");
+              }
+            }
+
+
+</pre>
+</div>
 </body>
+
 </html>

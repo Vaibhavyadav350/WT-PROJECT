@@ -1,10 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html>
 
+<head>
+    <title>Throw</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .card {
+            background-color: #262626;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        pre {
+            background-color: #333333;
+            border-radius: 5px;
+            color: lightgreen;
+            padding: 10px;
+            overflow-x: scroll;
+        }
+
+        .output {
+            background-color: #333333;
+            border-radius: 5px;
+            color: white;
+            padding: 10px;
+        }
+
+        .output p {
+            margin: 0;
+        }
+
+        #theory {
+            background-color: #262626;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.3);
+            margin: 20px auto;
+            max-width: 1500px;
+            padding: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: x-large;
+            color: violet;
+
+        }
+    </style>
+</head>
+
+<body>
+<h1>Try-Catch-Throw-Finally </h1>
+<div id="theory">
+
+
+    The Try-Catch-Throw block is similar to the Try-Catch-Finally block, but it allows the programmer to specify which
+    exceptions should be handled by the catch block and which should be thrown up to the calling method using the throws
+    keyword. This enables the calling method to handle the exception or pass it up the call stack until it is handled.
+
+</div>
+<div class="card">
+    <h2>Example</h2>
+    <pre>
+        try {
+          // code that may throw an exception
+        } catch (ExceptionType1 e1) {
+          // code to handle the exception of type ExceptionType1
+          throw e1;
+        } catch (ExceptionType2 e2) {
+          // code to handle the exception of type ExceptionType2
+          throw e2;
+        } finally {
+          // code that will be executed regardless of whether an exception is thrown or not
+        }
+</pre>
+</div>
 </body>
+
 </html>

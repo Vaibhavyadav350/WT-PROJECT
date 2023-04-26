@@ -1,13 +1,122 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>User Defiend Excepttion</title>
-</head>
-<body>
+<!DOCTYPE html>
+<html>
 
+<head>
+    <title>User Defiend Execption</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .card {
+            background-color: #262626;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        pre {
+            background-color: #333333;
+            border-radius: 5px;
+            color: lightgreen;
+            padding: 10px;
+            overflow-x: scroll;
+        }
+
+        .output {
+            background-color: #333333;
+            border-radius: 5px;
+            color: white;
+            padding: 10px;
+        }
+
+        .output p {
+            margin: 0;
+        }
+
+        #theory {
+            background-color: #262626;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.3);
+            margin: 20px auto;
+            max-width: 1500px;
+            padding: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: x-large;
+            color: violet;
+
+        }
+    </style>
+</head>
+
+<body>
+<h1>User-Defined Exceptions</h1>
+<div id="theory">
+
+    In Java, user-defined exceptions are custom exceptions that are created by the programmer to suit their specific
+    needs. These exceptions are created by extending the built-in Exception class or one of its subclasses.
+
+    User-defined exceptions allow developers to handle exceptional cases that may not be addressed by the built-in
+    exception classes. By defining their own exception classes, developers can provide more detailed information
+    about the error, and they can also define how the exception should be handled.
+
+    To create a user-defined exception, a new class is created that extends the Exception or RuntimeException class.
+    The class can then define constructors, methods, and fields specific to the exception.
+
+    When a user-defined exception is thrown, it is handled in the same way as any other exception in Java. The catch
+    block for the exception must be defined, and the program can then perform any necessary actions to handle the
+    exception.
+
+    User-defined exceptions are a powerful tool for developers to create more robust and maintainable code. By using
+    these exceptions, developers can create code that is more readable, easier to maintain, and better able to
+    handle exceptional cases.
+
+</div>
+<div class="card">
+    <h2>Example</h2>
+    <pre>
+            class InvalidAgeException extends Exception {
+
+                public InvalidAgeException(String message) {
+                  super(message);
+                }
+              }
+
+              class Voter {
+
+                public void checkAge(int age) throws InvalidAgeException {
+                  if (age < 18) {
+                    throw new InvalidAgeException("You are not eligible to vote!");
+                  } else {
+                    System.out.println("You are eligible to vote.");
+                  }
+                }
+              }
+
+              class Main {
+
+                public static void main(String[] args) {
+                  Voter voter = new Voter();
+                  try {
+                    voter.checkAge(15);
+                  } catch (InvalidAgeException e) {
+                    System.out.println("Exception caught: " + e.getMessage());
+                  }
+                }
+              }
+
+</pre>
+</div>
 </body>
+
 </html>
